@@ -1,7 +1,7 @@
 ﻿using Discord_bot.Types.Enums;
-namespace Discord_bot.Types.User
+namespace Discord_bot.Types
 {
- 
+
     public class User
     {
         private string id;
@@ -30,5 +30,5 @@ namespace Discord_bot.Types.User
         public UserFlags Flags { get => flags; set => flags = value; }
         public PremiumTypes PremiumType { get => premium_type; set => premium_type = value; }
         public UserFlags PublicFlags { get => public_flags; set => public_flags = value; }
-    } 
+    }
 }

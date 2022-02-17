@@ -2,7 +2,8 @@
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
-using Discord_bot.Types.User;
+// using Discord_bot.Types.User;
+using Discord_bot.Types;
 using Discord_bot.Types.Bot;
 using Discord_bot.Types.Channel;
 using Discord_bot.Types.Guild;

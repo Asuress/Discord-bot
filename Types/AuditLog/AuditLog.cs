@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-// using Discord_bot.Types;
+using Discord_bot.Types;
 
 namespace Discord_bot.Types.AuditLog
 {
@@ -11,7 +11,7 @@ namespace Discord_bot.Types.AuditLog
             set => webhooks = value;
         }
 
-        public LinkedList<User.User> Users
+        public LinkedList<User> Users
         {
             get => users;
             set => users = value;
@@ -30,7 +30,7 @@ namespace Discord_bot.Types.AuditLog
         }
 
         LinkedList<Webhook> webhooks;
-        LinkedList<User.User> users;
+        LinkedList<User> users;
         LinkedList<AuditLogEntry> audit_log_entries;
         LinkedList<Integration> integrations;
     }

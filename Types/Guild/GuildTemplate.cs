@@ -1,5 +1,4 @@
 using System;
-using Discord_bot.Types.User;
 namespace Discord_bot.Types.Guild
 {
     class GuildTemplate
@@ -46,7 +45,7 @@ namespace Discord_bot.Types.Guild
             set => is_dirty = value;
         }
 
-        public User.User Creator
+        public User Creator
         {
             get => creator;
             set => creator = value;
@@ -77,7 +76,7 @@ namespace Discord_bot.Types.Guild
         string source_guild_id;
         int usage_count;
         bool? is_dirty;
-        User.User creator;
+        User creator;
         Guid serialized_source_guild;
         DateTime created_at;
         DateTime updated_at;

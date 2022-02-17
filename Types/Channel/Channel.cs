@@ -78,7 +78,7 @@ namespace Discord_bot.Types.Channel
             set => rate_limit_per_user = value;
         }
 
-        public LinkedList<User.User> Recipients
+        public LinkedList<User> Recipients
         {
             get => recipients;
             set => recipients = value;
@@ -162,7 +162,7 @@ namespace Discord_bot.Types.Channel
         private int? bitrate;
         private int? user_limit;
         private int? rate_limit_per_user;
-        private LinkedList<User.User> recipients;
+        private LinkedList<User> recipients;
         private string icon;
         private string owner_id;
         private string application_id;

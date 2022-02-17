@@ -84,17 +84,17 @@ namespace Discord_bot.Types.Bot
             s = Encoding.UTF8.GetString(buff.Array);
         }
 
-        public async Task<User.User> GetMe()
+        public async Task<User> GetMe()
         {
             var httpResponse = await GetAsync("/users/@me", accessToken);
-            User.User bot = JsonSerializer.Deserialize<User.User>(await httpResponse.Content.ReadAsStringAsync(), options);
+            User bot = JsonSerializer.Deserialize<User>(await httpResponse.Content.ReadAsStringAsync(), options);
             return bot;
         }
 
-        public async Task<User.User> GetUser(string userId)
+        public async Task<User> GetUser(string userId)
         {
             var httpResponse = await GetAsync($"/users/{userId}", accessToken);
-            User.User user = JsonSerializer.Deserialize<User.User>(await httpResponse.Content.ReadAsStringAsync(), options);
+            User user = JsonSerializer.Deserialize<User>(await httpResponse.Content.ReadAsStringAsync(), options);
             return user;
         }
 
@@ -181,7 +181,7 @@ namespace Discord_bot.Types.Bot
 
         public async Task<Channel.Channel> CreateGuildChannel(string guildId, string content)
         {
-            var response = await PostAsync($"/guilds/{guildId}/channels", content, new string[]{$"access_token={token}"});
+            var response = await PostAsync($"/guilds/{guildId}/channels", content, new string[] { $"access_token={token}" });
             var channel = await response.Content.ReadAsStringAsync();
             return JsonSerializer.Deserialize<Channel.Channel>(channel, options);
         }

@@ -11,7 +11,7 @@ namespace Discord_bot.Types.Guild
         bool mute;
         bool? pending;
         LinkedList<string> roles;
-        User.User user;
+        User user;
         DateTime joined_at;
         DateTime? premium_since;
     }

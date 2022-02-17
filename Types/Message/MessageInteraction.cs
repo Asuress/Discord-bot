@@ -7,6 +7,6 @@ namespace Discord_bot.Types.Message
         private string id;
         private InteractionType type;
         private string name;
-        private User.User user;
+        private User user;
     }
 }

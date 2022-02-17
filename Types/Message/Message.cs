@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading.Channels;
 using Discord_bot.Types.Channel;
 using Discord_bot.Types.Guild;
-using Discord_bot.Types.User;
 using Discord_bot.Types.Embed;
 using Discord_bot.Types.Enums;
 
@@ -29,7 +28,7 @@ namespace Discord_bot.Types.Message
             set => guild_id = value;
         }
 
-        public User.User Author
+        public User Author
         {
             get => author;
             set => author = value;
@@ -194,7 +193,7 @@ namespace Discord_bot.Types.Message
         private string id;
         private string channel_id;
         private string guild_id;
-        private User.User author;
+        private User author;
         private GuildMember member;
         private string content;
         private DateTime timestamp;

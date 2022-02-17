@@ -22,7 +22,7 @@ namespace Discord_bot.Types.Guild
             set => roles = value;
         }
 
-        public User.User User
+        public User User
         {
             get => user;
             set => user = value;
@@ -56,7 +56,7 @@ namespace Discord_bot.Types.Guild
         private string id;
         private string name;
         private LinkedList<string> roles;
-        private User.User user;
+        private User user;
         private bool? require_colons;
         private bool? manages;
         private bool? animated;
