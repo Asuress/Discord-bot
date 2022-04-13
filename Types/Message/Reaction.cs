@@ -1,6 +1,4 @@
-﻿using Discord_bot.Types.Guild;
-
-namespace Discord_bot.Types.Message
+﻿namespace Discord_bot.Types
 {
     public class Reaction
     {

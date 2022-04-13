@@ -1,16 +1,24 @@
 using System.Collections.Generic;
 using Discord_bot.Types.Enums;
 
-namespace Discord_bot.Types.AuditLog
+namespace Discord_bot.Types
 {
     class AuditLogEntry
     {
-        string target_id;
-        string user_id;
-        string id;
-        string reason;
-        AuditLogEvent action_type;
-        //OptionalAuditEntryInfo options            ???
+        string targetId;
         LinkedList<AuditLogChange> changes;
+        string userId;
+        string id;
+        AuditLogEvents actionType;
+        OptionalAuditEntryInfo options;
+        string reason;
+
+        public string TargetId { get => targetId; set => targetId = value; }
+        public string UserId { get => userId; set => userId = value; }
+        public string Id { get => id; set => id = value; }
+        public OptionalAuditEntryInfo Options { get => options; set => options = value; }
+        public string Reason { get => reason; set => reason = value; }
+        internal LinkedList<AuditLogChange> Changes { get => changes; set => changes = value; }
+        internal AuditLogEvents ActionType { get => actionType; set => actionType = value; }
     }
 }

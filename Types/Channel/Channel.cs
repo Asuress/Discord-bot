@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Discord_bot.Types.Enums;
 
-namespace Discord_bot.Types.Channel
+namespace Discord_bot.Types
 {
     public class Channel
     {
@@ -20,8 +20,8 @@ namespace Discord_bot.Types.Channel
 
         public string GuildId
         {
-            get => guild_id;
-            set => guild_id = value;
+            get => guildId;
+            set => guildId = value;
         }
 
         public int? Position
@@ -56,8 +56,8 @@ namespace Discord_bot.Types.Channel
 
         public string LastMessageId
         {
-            get => last_message_id;
-            set => last_message_id = value;
+            get => lastMessageId;
+            set => lastMessageId = value;
         }
 
         public int? Bitrate
@@ -68,14 +68,14 @@ namespace Discord_bot.Types.Channel
 
         public int? UserLimit
         {
-            get => user_limit;
-            set => user_limit = value;
+            get => userLimit;
+            set => userLimit = value;
         }
 
         public int? RateLimitPerUser
         {
-            get => rate_limit_per_user;
-            set => rate_limit_per_user = value;
+            get => rateLimitPerUser;
+            set => rateLimitPerUser = value;
         }
 
         public LinkedList<User> Recipients
@@ -92,50 +92,50 @@ namespace Discord_bot.Types.Channel
 
         public string OwnerId
         {
-            get => owner_id;
-            set => owner_id = value;
+            get => ownerId;
+            set => ownerId = value;
         }
 
         public string ApplicationId
         {
-            get => application_id;
-            set => application_id = value;
+            get => applicationId;
+            set => applicationId = value;
         }
 
         public string ParentId
         {
-            get => parent_id;
-            set => parent_id = value;
+            get => parentId;
+            set => parentId = value;
         }
 
         public DateTime LastPinTimestamp
         {
-            get => last_pin_timestamp;
-            set => last_pin_timestamp = value;
+            get => lastPinTimestamp;
+            set => lastPinTimestamp = value;
         }
 
         public string RtcRegion
         {
-            get => rtc_region;
-            set => rtc_region = value;
+            get => rtcRegion;
+            set => rtcRegion = value;
         }
 
         public VideoQualityModes VideoQualityMode
         {
-            get => video_quality_mode;
-            set => video_quality_mode = value;
+            get => videoQualityMode;
+            set => videoQualityMode = value;
         }
 
         public int? MessageCount
         {
-            get => message_count;
-            set => message_count = value;
+            get => messageCount;
+            set => messageCount = value;
         }
 
         public int? MemberCount
         {
-            get => member_count;
-            set => member_count = value;
+            get => memberCount;
+            set => memberCount = value;
         }
 
         public ThreadMember Member
@@ -146,34 +146,35 @@ namespace Discord_bot.Types.Channel
 
         public ThreadMetadata ThreadMetadata
         {
-            get => thread_metadata;
-            set => thread_metadata = value;
+            get => threadMetadata;
+            set => threadMetadata = value;
         }
 
         private string id;
         private ChannelTypes type;
-        private string guild_id;
+        private string guildId;
         private int? position;
         private LinkedList<Overwrite> permission_overwrites;
         private string name;
         private string topic;
         private bool? nsfw;
-        private string last_message_id;
+        private string lastMessageId;
         private int? bitrate;
-        private int? user_limit;
-        private int? rate_limit_per_user;
+        private int? userLimit;
+        private int? rateLimitPerUser;
         private LinkedList<User> recipients;
         private string icon;
-        private string owner_id;
-        private string application_id;
-        private string parent_id;
-        private DateTime last_pin_timestamp;
-        private string rtc_region;
-        private VideoQualityModes video_quality_mode;
-        private int? message_count;
-        private int? member_count;
+        private string ownerId;
+        private string applicationId;
+        private string parentId;
+        private DateTime lastPinTimestamp;
+        private string rtcRegion;
+        private VideoQualityModes videoQualityMode;
+        private int? messageCount;
+        private int? memberCount;
+        private ThreadMetadata threadMetadata;
         private ThreadMember member;
-        private ThreadMetadata thread_metadata;
-
+        private int defaultAutoArchiveDuration;
+        private string permissions;
     }
 }

@@ -1,10 +1,10 @@
 using Discord_bot.Types.Enums;
 
-namespace Discord_bot.Types.Channel.Args
+namespace Discord_bot.Types
 {
     public class ModifyVoiceChannelArgs : ModifyChannelArgs
     {
-        public ModifyVoiceChannelArgs(){}
+        public ModifyVoiceChannelArgs() { }
         public ModifyVoiceChannelArgs(Channel channel) : base(channel)
         {
             Bitrate = channel.Bitrate;

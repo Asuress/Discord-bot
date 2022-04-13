@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Discord_bot.Types.Embed
+namespace Discord_bot.Types
 {
     public class Embed
     {

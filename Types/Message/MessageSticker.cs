@@ -1,6 +1,6 @@
 ﻿using Discord_bot.Types.Enums;
 
-namespace Discord_bot.Types.Message
+namespace Discord_bot.Types
 {
     public class MessageSticker
     {

@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Channels;
-using Discord_bot.Types.Channel;
-using Discord_bot.Types.Guild;
-using Discord_bot.Types.Embed;
+using Discord_bot.Types;
 using Discord_bot.Types.Enums;
 
-namespace Discord_bot.Types.Message
+namespace Discord_bot.Types
 {
     public class Message
     {
@@ -94,7 +92,7 @@ namespace Discord_bot.Types.Message
             set => attachments = value;
         }
 
-        public LinkedList<Embed.Embed> Embeds
+        public LinkedList<Embed> Embeds
         {
             get => embeds;
             set => embeds = value;
@@ -172,7 +170,7 @@ namespace Discord_bot.Types.Message
             set => interaction = value;
         }
 
-        public Channel.Channel Thread
+        public Channel Thread
         {
             get => thread;
             set => thread = value;
@@ -204,7 +202,7 @@ namespace Discord_bot.Types.Message
         private LinkedList<Role> mention_roles;
         private LinkedList<ChannelMention> mention_channels;
         private LinkedList<Attachment> attachments;
-        private LinkedList<Embed.Embed> embeds;
+        private LinkedList<Embed> embeds;
         private LinkedList<Reaction> reactions;
         private dynamic nonce; // строка или инт лул
         private bool pinned;
@@ -218,7 +216,7 @@ namespace Discord_bot.Types.Message
         private LinkedList<MessageSticker> stickers;
         private Message referenced_message;
         private MessageInteraction interaction;
-        private Channel.Channel thread;
+        private Channel thread;
         private LinkedList<MessageComponent> components; //MessageComponent 
     }
 }

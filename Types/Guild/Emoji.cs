@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Discord_bot.Types.Guild
+namespace Discord_bot.Types
 {   //пересмотреть
     public class Emoji
     {

@@ -1,9 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Discord_bot.Types.Channel;
 using Discord_bot.Types.Enums;
 
-namespace Discord_bot.Types.Guild
+namespace Discord_bot.Types
 {
     public class Guild
     {
@@ -247,7 +246,7 @@ namespace Discord_bot.Types.Guild
             set => members = value;
         }
 
-        public LinkedList<Channel.Channel> Channels
+        public LinkedList<Channel> Channels
         {
             get => channels;
             set => channels = value;
@@ -341,7 +340,7 @@ namespace Discord_bot.Types.Guild
         private MFALevel mfa_level;
         private WelcomeScreen welcome_screen;
         private LinkedList<GuildMember> members;
-        private LinkedList<Channel.Channel> channels;
+        private LinkedList<Channel> channels;
         private LinkedList<Thread> threads;
         private LinkedList<Presence> presences;
         private LinkedList<VoiceState> voice_states;

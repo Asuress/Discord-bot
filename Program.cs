@@ -2,13 +2,9 @@
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
-// using Discord_bot.Types.User;
 using Discord_bot.Types;
-using Discord_bot.Types.Bot;
-using Discord_bot.Types.Channel;
-using Discord_bot.Types.Guild;
 using Discord_bot.Dependencies;
-using Discord_bot.Types.Channel.Args;
+using System;
 
 namespace Discord_bot
 {
@@ -18,15 +14,27 @@ namespace Discord_bot
         {
             var options = new JsonSerializerOptions(JsonSerializerDefaults.Web);
             options.PropertyNamingPolicy = SnakeCaseNamingPolicy.Instance;
-            Bot DiscrodBot = new Bot();
-            DiscrodBot.Connect();
-            User i = await DiscrodBot.GetMe();
-            LinkedList<Guild> MyGuild = await DiscrodBot.GetMyGuilds();
-            Channel anyChannel = MyGuild.First.Value.Channels.First.Next.Value;
-            string json = "{\"content\": \"Hello, World!\",\"tts\": false,\"embed\": {\"title\": \"Hello, Embed!\",\"description\": \"This is an embedded message.\"}}";
-            DiscrodBot.SendMessageAsync(anyChannel.Id, json);
+
+            DiscordClient client = new DiscordClient("ODQ2MDQyNDg4NTg2MzcxMDcz.YKpwdw.qKJwHDb_c5TFQobBupMfP9d6ViI");
+
+            await client.AuthorizeAsync();
+
+            await client.ConnectAsync(new List<GatewayIntents>()
+            {
+                GatewayIntents.GUILDS,
+                GatewayIntents.GUILD_MEMBERS,
+                GatewayIntents.GUILD_BANS,
+                GatewayIntents.GUILD_MESSAGES
+            });
+
+            User me = await client.GetMeAsync();
+            LinkedList<Guild> MyGuilds = await client.GetMyGuildsAsync();
+
+            client.MessageReceived += (o, args) => { Console.WriteLine(args.Data); };
+
             while (true)
             {
+
             }
         }
     }

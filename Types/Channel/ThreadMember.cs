@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Discord_bot.Types.Channel
+namespace Discord_bot.Types
 {
     public class ThreadMember
     {

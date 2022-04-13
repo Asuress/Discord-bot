@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Discord_bot.Types.Message
+namespace Discord_bot.Types
 {
     public static class ChannelMessagesOptions //работает наверное
     

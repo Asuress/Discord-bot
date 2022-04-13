@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using Discord_bot.Types.Guild;
 
-namespace Discord_bot.Types.Gateway
+namespace Discord_bot.Types
 {
     class Activity
     {

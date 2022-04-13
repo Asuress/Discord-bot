@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
 using Discord_bot.Types.Enums;
 
-namespace Discord_bot.Types.Channel.Args
+namespace Discord_bot.Types
 {
     public class ModifyNewsChannelArgs : ModifyChannelArgs
     {

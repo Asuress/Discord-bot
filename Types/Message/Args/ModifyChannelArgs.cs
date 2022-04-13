@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Discord_bot.Types.Channel.Args
+namespace Discord_bot.Types
 {
     public class ModifyChannelArgs
     {

@@ -1,5 +1,4 @@
 ﻿using System;
-using Discord_bot.Types.Guild;
 
 namespace Discord_bot.Types
 {
@@ -18,7 +17,5 @@ namespace Discord_bot.Types
         private bool suppress;
         private DateTime request_to_speak_timestamp;//nullable
         private GuildMember member; //может не быть в респонсе
-
-
     }
 }

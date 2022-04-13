@@ -1,6 +1,6 @@
 ﻿using Discord_bot.Types.Enums;
 
-namespace Discord_bot.Types.Channel
+namespace Discord_bot.Types
 {
     public class ChannelMention
     {

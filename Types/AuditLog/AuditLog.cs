@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using Discord_bot.Types;
 
-namespace Discord_bot.Types.AuditLog
+namespace Discord_bot.Types
 {
     class AuditLog
     {
@@ -19,19 +18,17 @@ namespace Discord_bot.Types.AuditLog
 
         public LinkedList<AuditLogEntry> AuditLogEntries
         {
-            get => audit_log_entries;
-            set => audit_log_entries = value;
+            get => auditLogEntries;
+            set => auditLogEntries = value;
         }
+        public LinkedList<Integration> Integrations { get => integrations; set => integrations = value; }
+        public LinkedList<GuildSchelduledEvents> GuildScheduledEvents { get => guildScheduledEvents; set => guildScheduledEvents = value; }
 
-        public LinkedList<Integration> Integrations
-        {
-            get => integrations;
-            set => integrations = value;
-        }
-
-        LinkedList<Webhook> webhooks;
-        LinkedList<User> users;
-        LinkedList<AuditLogEntry> audit_log_entries;
+        LinkedList<AuditLogEntry> auditLogEntries;
+        LinkedList<GuildSchelduledEvents> guildScheduledEvents;
         LinkedList<Integration> integrations;
+        LinkedList<Channel> threads;
+        LinkedList<User> users;
+        LinkedList<Webhook> webhooks;
     }
 }

@@ -1,14 +1,16 @@
-namespace Discord_bot.Types.Gateway
+using System.Collections.Generic;
+
+namespace Discord_bot.Types
 {
-    class GatewayPayload
+    public class GatewayPayload
     {
-        int op;
-        dynamic d;
+        GatewayOpcodes op;
+        string d;
         int? s;
         string t;
 
-        public int Op { get => op; set => op = value; }
-        public dynamic D { get => d; set => d = value; }
+        public GatewayOpcodes Op { get => op; set => op = value; }
+        public string D { get => d; set => d = value; }
         public int? S { get => s; set => s = value; }
         public string T { get => t; set => t = value; }
     }

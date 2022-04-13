@@ -1,6 +1,6 @@
 using Discord_bot.Types.Enums;
 
-namespace Discord_bot.Types.Channel.Args
+namespace Discord_bot.Types
 {
     public static class ModifyChannelArgsBuilder
     {

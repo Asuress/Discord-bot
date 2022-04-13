@@ -1,5 +1,5 @@
 using System;
-namespace Discord_bot.Types.Guild
+namespace Discord_bot.Types
 {
     class GuildTemplate
     {
